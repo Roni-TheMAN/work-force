@@ -1,0 +1,20 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+
+# Project dependencies
+**/node_modules/
+
+# Build output
+**/dist/
+**/.expo/
+**/web-build/
+
+# Env files
+**/.env
+**/.env.local
+
+# Logs
+*.log
+npm-debug.log*
