@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -7,8 +8,81 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Project {
-  id        Int      @id @default(autoincrement())
-  name      String
-  createdAt DateTime @default(now())
+model User {
+  id                       String               @id @db.Uuid
+  email                    String               @unique
+  fullName                 String?              @map("full_name")
+  phone                    String?
+  avatarUrl                String?              @map("avatar_url")
+  lastActiveOrganizationId String?              @map("last_active_organization_id") @db.Uuid
+  createdAt                DateTime             @default(now()) @map("created_at")
+  updatedAt                DateTime             @updatedAt @map("updated_at")
+  lastActiveOrganization   Organization?        @relation("LastActiveOrganization", fields: [lastActiveOrganizationId], references: [id])
+  ownedOrganizations       Organization[]       @relation("OrganizationOwner")
+  organizationMemberships  OrganizationMember[] @relation("OrganizationMemberUser")
+  organizationInvites      OrganizationMember[] @relation("OrganizationMemberInviter")
+
+  @@map("users")
+}
+
+model Organization {
+  id               String               @id @default(uuid()) @db.Uuid
+  slug             String               @unique
+  name             String
+  legalName        String?              @map("legal_name")
+  timezone         String
+  status           String
+  ownerUserId      String               @map("owner_user_id") @db.Uuid
+  stripeCustomerId String?              @unique @map("stripe_customer_id")
+  createdAt        DateTime             @default(now()) @map("created_at")
+  updatedAt        DateTime             @updatedAt @map("updated_at")
+  archivedAt       DateTime?            @map("archived_at")
+  ownerUser        User                 @relation("OrganizationOwner", fields: [ownerUserId], references: [id])
+  lastActiveUsers  User[]               @relation("LastActiveOrganization")
+  members          OrganizationMember[]
+  properties       Property[]
+
+  @@map("organizations")
+}
+
+model OrganizationMember {
+  id              String       @id @default(uuid()) @db.Uuid
+  organizationId  String       @map("organization_id") @db.Uuid
+  userId          String       @map("user_id") @db.Uuid
+  role            String
+  status          String
+  invitedEmail    String?      @map("invited_email")
+  invitedByUserId String?      @map("invited_by_user_id") @db.Uuid
+  joinedAt        DateTime?    @map("joined_at")
+  createdAt       DateTime     @default(now()) @map("created_at")
+  updatedAt       DateTime     @updatedAt @map("updated_at")
+  organization    Organization @relation(fields: [organizationId], references: [id])
+  user            User         @relation("OrganizationMemberUser", fields: [userId], references: [id])
+  invitedByUser   User?        @relation("OrganizationMemberInviter", fields: [invitedByUserId], references: [id])
+
+  @@unique([organizationId, userId])
+  @@index([userId])
+  @@map("organization_members")
+}
+
+model Property {
+  id             String       @id @default(uuid()) @db.Uuid
+  organizationId String       @map("organization_id") @db.Uuid
+  name           String
+  code           String?
+  timezone       String
+  addressLine1   String?      @map("address_line1")
+  addressLine2   String?      @map("address_line2")
+  city           String?
+  stateRegion    String?      @map("state_region")
+  postalCode     String?      @map("postal_code")
+  countryCode    String?      @map("country_code")
+  status         String
+  createdAt      DateTime     @default(now()) @map("created_at")
+  updatedAt      DateTime     @updatedAt @map("updated_at")
+  organization   Organization @relation(fields: [organizationId], references: [id])
+
+  @@unique([organizationId, code])
+  @@index([organizationId])
+  @@map("properties")
 }

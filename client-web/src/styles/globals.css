@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth font-sans;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  button,
+  [role="button"] {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}
+
+.google-place-autocomplete {
+  display: block;
+  width: 100%;
+  color-scheme: light;
+  --gmpx-color-surface: hsl(var(--background));
+  --gmpx-color-on-surface: hsl(var(--foreground));
+  --gmpx-color-on-surface-variant: hsl(var(--muted-foreground));
+  --gmpx-color-primary: hsl(var(--primary));
+  --gmpx-color-outline: hsl(var(--border));
+  --gmpx-color-surface-container: hsl(var(--popover));
+  --gmpx-font-family-base: var(--font-sans);
+  --gmpx-font-size-base: 0.875rem;
+  --gmpx-border-radius: var(--radius-lg);
+}
+
+.google-place-autocomplete::part(input) {
+  min-height: 2.5rem;
+  border-radius: var(--radius-lg);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.google-place-autocomplete::part(predictions) {
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-lg);
+  background: hsl(var(--popover));
+  box-shadow: 0 18px 48px -24px hsl(var(--foreground) / 0.18);
+}
+
+.google-place-autocomplete::part(prediction-item) {
+  background: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+}
+
+.google-place-autocomplete::part(prediction-item-selected) {
+  background: hsl(var(--primary-soft));
+}
+
+.google-place-autocomplete::part(prediction-item-main-text) {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+.google-place-autocomplete::part(prediction-item-secondary-text) {
+  color: hsl(var(--muted-foreground));
+}
