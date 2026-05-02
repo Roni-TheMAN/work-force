@@ -6,15 +6,25 @@ export type DashboardRange = "today" | "week" | "month";
 export type DashboardAnalyticsTab = "hours" | "employees" | "payroll";
 export type DashboardPlan = "free" | "pro" | "enterprise";
 export type DashboardRole = "owner" | "admin" | "manager" | "hr";
+export type DashboardValueVariant = "integer" | "hours" | "currency";
 
 export type DashboardMetric = {
   id: "employees" | "properties" | "hours" | "shifts" | "payroll" | "limits";
   label: string;
   value: number;
-  variant: "integer" | "hours" | "currency";
+  variant: DashboardValueVariant;
   delta: number;
   helper: string;
   tone: "positive" | "negative" | "neutral" | "warning";
+};
+
+export type DashboardKpi = {
+  id: "employees" | "properties" | "hours" | "open-shifts";
+  label: string;
+  value: number;
+  variant: DashboardValueVariant;
+  delta?: number;
+  helper: string;
 };
 
 export type DashboardProperty = {
@@ -89,6 +99,7 @@ export type DashboardUser = {
   name: string;
   email: string;
   role: DashboardRole;
+  joinedAtLabel: string;
   lastActive: string;
   status: "online" | "away" | "offline";
   avatarUrl: string | null;
@@ -113,16 +124,40 @@ export type DashboardPermissions = {
   canAddProperty: boolean;
 };
 
+export type DashboardCapabilities = {
+  analytics: boolean;
+  payroll: boolean;
+  timeTracking: boolean;
+  userAccess: boolean;
+};
+
+export type DashboardSummary = {
+  activeEmployees: number;
+  inactiveEmployees: number;
+  todayHours: number;
+  openShiftCount: number;
+  reviewShiftCount: number;
+  currentRangeHours: number;
+  employeesWithShifts: number;
+};
+
 export type OrganizationDashboardData = {
   generatedAt: string;
   role: DashboardRole;
+  allProperties: DashboardProperty[];
   properties: DashboardProperty[];
+  kpis: DashboardKpi[];
   metrics: DashboardMetric[];
+  summary: DashboardSummary;
+  capabilities: DashboardCapabilities;
   breakdown: DashboardBreakdown[];
   trend: DashboardTrendPoint[];
   recentClockIns: DashboardClockIn[];
   employeesWithoutShifts: DashboardCoverageGap[];
   shifts: {
+    active: DashboardShift[];
+    recent: DashboardShift[];
+    review: DashboardShift[];
     today: DashboardShift[];
     upcoming: DashboardShift[];
     open: DashboardShift[];
@@ -139,6 +174,7 @@ type UseOrganizationDashboardOptions = {
   organizationIndex: number;
   user: CurrentUser | null;
   range: DashboardRange;
+  propertyId?: string | null;
 };
 
 const firstNames = [
@@ -427,7 +463,10 @@ function formatHourLabel(hour: number): string {
   return `${normalized}:00 ${suffix}`;
 }
 
-function createShifts(properties: DashboardProperty[], seed: number): OrganizationDashboardData["shifts"] {
+function createShifts(
+  properties: DashboardProperty[],
+  seed: number,
+): Pick<OrganizationDashboardData["shifts"], "today" | "upcoming" | "open"> {
   const today = Array.from({ length: 6 }, (_, index) => {
     const property = properties[index % properties.length]!;
     const start = seededInt(seed, index + 210, 6, 14);
@@ -523,6 +562,7 @@ function createUsers(role: DashboardRole, user: CurrentUser | null, seed: number
       name: currentUserName,
       email: currentUserEmail,
       role,
+      joinedAtLabel: "Joined this month",
       lastActive: "Just now",
       status: "online",
       avatarUrl: user?.avatarUrl ?? null,
@@ -532,6 +572,7 @@ function createUsers(role: DashboardRole, user: CurrentUser | null, seed: number
       name: createPersonName(seed, 330),
       email: "ops.lead@example.com",
       role: role === "manager" ? "admin" : "manager",
+      joinedAtLabel: "Joined 3 months ago",
       lastActive: "18 minutes ago",
       status: "away",
       avatarUrl: null,
@@ -541,6 +582,7 @@ function createUsers(role: DashboardRole, user: CurrentUser | null, seed: number
       name: createPersonName(seed, 331),
       email: "hr.partners@example.com",
       role: "hr",
+      joinedAtLabel: "Joined 5 months ago",
       lastActive: "2 hours ago",
       status: "offline",
       avatarUrl: null,
@@ -550,6 +592,7 @@ function createUsers(role: DashboardRole, user: CurrentUser | null, seed: number
       name: createPersonName(seed, 332),
       email: "admin.billing@example.com",
       role: role === "owner" ? "admin" : "owner",
+      joinedAtLabel: "Joined last year",
       lastActive: "Yesterday",
       status: "offline",
       avatarUrl: null,
@@ -655,16 +698,64 @@ function createMetrics(
   ];
 }
 
+function createKpis(
+  properties: DashboardProperty[],
+  totalEmployees: number,
+  totalHours: number,
+  openShiftCount: number,
+  seed: number,
+): DashboardKpi[] {
+  return [
+    {
+      id: "employees",
+      label: "Employees",
+      value: totalEmployees,
+      variant: "integer",
+      delta: createMetricDelta(seed, 345),
+      helper: "Across current scope",
+    },
+    {
+      id: "properties",
+      label: "Properties",
+      value: properties.length,
+      variant: "integer",
+      delta: createMetricDelta(seed, 346),
+      helper: "In current view",
+    },
+    {
+      id: "hours",
+      label: "Hours in range",
+      value: totalHours,
+      variant: "hours",
+      delta: createMetricDelta(seed, 347),
+      helper: "Tracked labor time",
+    },
+    {
+      id: "open-shifts",
+      label: "Open shifts",
+      value: openShiftCount,
+      variant: "integer",
+      delta: createMetricDelta(seed, 348),
+      helper: "Needs assignment or review",
+    },
+  ];
+}
+
 function buildDashboardData(
   organization: ClientOrganization,
   organizationIndex: number,
   user: CurrentUser | null,
   range: DashboardRange,
+  propertyId: string | null | undefined,
 ): OrganizationDashboardData {
   const role = normalizeRole(organization.role);
   const seed = hashValue(`${organization.id}:${range}:${organizationIndex}`);
   const rangeMultiplier = range === "today" ? 1 : range === "week" ? 6.4 : 23.5;
-  const { properties, previewData } = createDashboardProperties(organization, rangeMultiplier, seed);
+  const { properties: allProperties, previewData } = createDashboardProperties(organization, rangeMultiplier, seed);
+  const properties =
+    propertyId && allProperties.some((property) => property.id === propertyId)
+      ? allProperties.filter((property) => property.id === propertyId)
+      : allProperties;
   const breakdown = properties.map((property) => ({
     name: property.name,
     hours: property.currentPeriodHours,
@@ -675,29 +766,60 @@ function buildDashboardData(
     (sum, property) => sum + property.activeEmployees + property.inactiveEmployees,
     0,
   );
+  const activeEmployees = properties.reduce((sum, property) => sum + property.activeEmployees, 0);
+  const inactiveEmployees = properties.reduce((sum, property) => sum + property.inactiveEmployees, 0);
+  const todayHours = Number(properties.reduce((sum, property) => sum + property.todayHours, 0).toFixed(1));
   const totalHours = Number(properties.reduce((sum, property) => sum + property.currentPeriodHours, 0).toFixed(1));
   const activeShifts = properties.reduce((sum, property) => sum + Math.max(2, property.openShifts + 3), 0);
   const monthlySpend = breakdown.reduce((sum, property) => sum + property.payroll, 0);
   const plan = getPlanForOrganization(organizationIndex);
   const billing = createBilling(plan, properties, totalEmployees, monthlySpend);
   const trend = createTrend(range, properties, seed);
+  const shiftCollections = createShifts(properties, seed);
+  const activeShiftItems = shiftCollections.today.filter((shift) => shift.status === "active" || shift.status === "late");
+  const recentShiftItems = shiftCollections.today;
+  const reviewShiftItems = shiftCollections.open;
+  const summary = {
+    activeEmployees,
+    inactiveEmployees,
+    todayHours,
+    openShiftCount: shiftCollections.open.length,
+    reviewShiftCount: reviewShiftItems.length,
+    currentRangeHours: totalHours,
+    employeesWithShifts: new Set(recentShiftItems.map((shift) => shift.employee).filter(Boolean)).size,
+  } satisfies DashboardSummary;
   const permissions = {
     canManageBilling: role === "owner" || role === "admin",
     canManageUsers: role === "owner" || role === "admin",
     canInviteUsers: role !== "manager",
     canAddProperty: role !== "manager" && billing.canAddProperty,
   } satisfies DashboardPermissions;
+  const capabilities = {
+    analytics: billing.analyticsEntitlement,
+    payroll: false,
+    timeTracking: true,
+    userAccess: permissions.canManageUsers,
+  } satisfies DashboardCapabilities;
 
   return {
     generatedAt: new Date().toISOString(),
     role,
+    allProperties,
     properties,
+    kpis: createKpis(properties, totalEmployees, totalHours, summary.openShiftCount, seed),
     metrics: createMetrics(properties, totalEmployees, totalHours, activeShifts, monthlySpend, billing, range, seed),
+    summary,
+    capabilities,
     breakdown,
     trend,
     recentClockIns: createRecentClockIns(properties, seed),
     employeesWithoutShifts: createCoverageGaps(properties, seed),
-    shifts: createShifts(properties, seed),
+    shifts: {
+      ...shiftCollections,
+      active: activeShiftItems,
+      recent: recentShiftItems,
+      review: reviewShiftItems,
+    },
     alerts: createAlerts(properties, billing, seed),
     billing,
     permissions,
@@ -711,9 +833,10 @@ export function useOrganizationDashboard({
   organizationIndex,
   user,
   range,
+  propertyId,
 }: UseOrganizationDashboardOptions) {
   return useQuery({
-    queryKey: ["organization-dashboard", organization?.id ?? "none", organizationIndex, range],
+    queryKey: ["organization-dashboard", organization?.id ?? "none", organizationIndex, range, propertyId ?? "all"],
     queryFn: async () => {
       if (!organization) {
         throw new Error("Organization context is required.");
@@ -723,7 +846,7 @@ export function useOrganizationDashboard({
         window.setTimeout(resolve, 220);
       });
 
-      return buildDashboardData(organization, organizationIndex, user, range);
+      return buildDashboardData(organization, organizationIndex, user, range, propertyId);
     },
     enabled: Boolean(organization),
     placeholderData: (previousData) => previousData,

@@ -17,11 +17,15 @@ import { cn } from "@/lib/utils";
 type OrganizationPropertySelectorProps = {
   organizations: Organization[];
   onContinue?: (selection: { organizationId: string; propertyId: string }) => void;
+  onOpenDashboard?: (organizationId: string) => void;
+  onOpenPropertyDashboard?: (propertyId: string) => void;
 };
 
 export function OrganizationPropertySelector({
   organizations,
   onContinue,
+  onOpenDashboard,
+  onOpenPropertyDashboard,
 }: OrganizationPropertySelectorProps) {
   const shouldReduceMotion = useReducedMotion();
   const [selectedOrganizationId, setSelectedOrganizationId] = useState<string | null>(null);
@@ -82,6 +86,7 @@ export function OrganizationPropertySelector({
                   organization={organization}
                   selected={organization.id === selectedOrganizationId}
                   onSelect={handleOrganizationSelect}
+                  onOpenDashboard={onOpenDashboard}
                 />
               ))}
             </div>
@@ -128,7 +133,7 @@ export function OrganizationPropertySelector({
                 <div className="space-y-2">
                   <CardTitle className="text-xl">{selectedOrganization.name}</CardTitle>
                   <CardDescription>
-                    Choose the property where this user should land after authentication, or add a new one directly here.
+                    Browse this organization's properties or add a new one directly here before entering the workspace.
                   </CardDescription>
                 </div>
                 <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
@@ -158,7 +163,14 @@ export function OrganizationPropertySelector({
                           key={property.id}
                           property={property}
                           selected={property.id === selectedPropertyId}
-                          onSelect={setSelectedPropertyId}
+                          onSelect={(propertyId) => {
+                            setSelectedPropertyId(propertyId);
+
+                            if (!onContinue && onOpenPropertyDashboard) {
+                              onOpenPropertyDashboard(propertyId);
+                            }
+                          }}
+                          onOpenDashboard={onContinue ? undefined : onOpenPropertyDashboard}
                         />
                       ))
                     ) : (
@@ -183,16 +195,24 @@ export function OrganizationPropertySelector({
               <CardFooter className="justify-between gap-4">
                 <div className="space-y-1">
                   <p className="text-sm font-medium text-foreground">
-                    {selectedProperty ? `${selectedProperty.name} selected` : "Choose a property to continue"}
+                    {onContinue
+                      ? selectedProperty
+                        ? `${selectedProperty.name} selected`
+                        : "Choose a property to continue"
+                      : selectedProperty
+                        ? `${selectedProperty.name} selected`
+                        : "Use Dashboard on the organization card to enter"}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Property records now come from the backend and stay scoped to the selected organization.
                   </p>
                 </div>
-                <Button type="button" onClick={handleContinue} disabled={!selectedProperty}>
-                  Continue
-                  <ArrowRight className="size-4" />
-                </Button>
+                {onContinue ? (
+                  <Button type="button" onClick={handleContinue} disabled={!selectedProperty}>
+                    Continue
+                    <ArrowRight className="size-4" />
+                  </Button>
+                ) : null}
               </CardFooter>
             </Card>
           ) : (

@@ -1,0 +1,197 @@
+import { Router } from "express";
+
+import {
+  advancePropertyPayrollPeriodController,
+  applyPropertyScheduleTemplateController,
+  approvePropertyPayrollEmployeeController,
+  createPropertyPayrollRunController,
+  createPropertyEmployeeController,
+  createPropertyScheduleTemplateController,
+  createPropertyShiftController,
+  deletePropertyScheduleTemplateController,
+  deletePropertyShiftController,
+  exportPropertyPayrollDetailPdfController,
+  exportPropertyPayrollShiftsCsvController,
+  exportPropertyPayrollSummaryCsvController,
+  finalizePropertyPayrollRunController,
+  getPropertyDashboardController,
+  getPropertyAccessController,
+  getPropertyEmployeesController,
+  getPropertyOverviewController,
+  getPropertyPayrollPeriodDetailController,
+  getPropertyPayrollPreviewController,
+  getPropertyPermissionsController,
+  getPropertyScheduleController,
+  getPropertyScheduleTemplatesController,
+  getPropertyTimeLogsController,
+  listPropertyPayrollPeriodsController,
+  patchPropertyAccessController,
+  patchPropertyScheduleTemplateController,
+  patchPropertyShiftController,
+  patchPropertySettingsController,
+  publishPropertyScheduleController,
+  reopenPropertyPayrollRunController,
+  resetPropertyPayrollEmployeeApprovalController,
+} from "./property.controller";
+import { requireAuth, requireEffectivePermission, requireOrgAccess, requirePropertyAccess } from "./property.middleware";
+import { PERMISSIONS } from "../../lib/permissions";
+
+export const propertyModuleRouter = Router();
+
+propertyModuleRouter.use("/property/:propertyId", requireAuth, requireOrgAccess, requirePropertyAccess);
+
+propertyModuleRouter.get(
+  "/property/:propertyId/dashboard",
+  requireEffectivePermission(PERMISSIONS.PROPERTY_READ),
+  getPropertyDashboardController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/permissions",
+  requireEffectivePermission(PERMISSIONS.PROPERTY_READ),
+  getPropertyPermissionsController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/overview",
+  requireEffectivePermission(PERMISSIONS.PROPERTY_READ),
+  getPropertyOverviewController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/employees",
+  requireEffectivePermission(PERMISSIONS.EMPLOYEE_READ),
+  getPropertyEmployeesController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/schedule",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_READ),
+  getPropertyScheduleController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/schedule/templates",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_READ),
+  getPropertyScheduleTemplatesController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/schedule/templates",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  createPropertyScheduleTemplateController
+);
+propertyModuleRouter.patch(
+  "/property/:propertyId/schedule/templates/:templateId",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  patchPropertyScheduleTemplateController
+);
+propertyModuleRouter.delete(
+  "/property/:propertyId/schedule/templates/:templateId",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  deletePropertyScheduleTemplateController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/schedule/templates/:templateId/apply",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  applyPropertyScheduleTemplateController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/schedule/shifts",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  createPropertyShiftController
+);
+propertyModuleRouter.patch(
+  "/property/:propertyId/schedule/shifts/:shiftId",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  patchPropertyShiftController
+);
+propertyModuleRouter.delete(
+  "/property/:propertyId/schedule/shifts/:shiftId",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  deletePropertyShiftController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/schedule/publish",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_WRITE),
+  publishPropertyScheduleController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/time-logs",
+  requireEffectivePermission(PERMISSIONS.SCHEDULE_READ),
+  getPropertyTimeLogsController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/payroll-preview",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_READ),
+  getPropertyPayrollPreviewController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/payroll/periods",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_READ),
+  listPropertyPayrollPeriodsController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/payroll/periods/:periodId",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_READ),
+  getPropertyPayrollPeriodDetailController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/payroll/periods/:periodId/runs",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_WRITE),
+  createPropertyPayrollRunController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/payroll/runs/:runId/employees/:employeeId/approve",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_WRITE),
+  approvePropertyPayrollEmployeeController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/payroll/runs/:runId/employees/:employeeId/reset-approval",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_WRITE),
+  resetPropertyPayrollEmployeeApprovalController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/payroll/runs/:runId/finalize",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_WRITE),
+  finalizePropertyPayrollRunController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/payroll/runs/:runId/reopen",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_WRITE),
+  reopenPropertyPayrollRunController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/payroll/runs/:runId/export/summary.csv",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_READ),
+  exportPropertyPayrollSummaryCsvController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/payroll/runs/:runId/export/shifts.csv",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_READ),
+  exportPropertyPayrollShiftsCsvController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/payroll/runs/:runId/export/detail.pdf",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_READ),
+  exportPropertyPayrollDetailPdfController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/payroll/advance-period",
+  requireEffectivePermission(PERMISSIONS.PAYROLL_WRITE),
+  advancePropertyPayrollPeriodController
+);
+propertyModuleRouter.get(
+  "/property/:propertyId/access",
+  requireEffectivePermission(PERMISSIONS.PROPERTY_WRITE),
+  getPropertyAccessController
+);
+propertyModuleRouter.patch(
+  "/property/:propertyId/access/:userId",
+  requireEffectivePermission(PERMISSIONS.PROPERTY_WRITE),
+  patchPropertyAccessController
+);
+propertyModuleRouter.patch(
+  "/property/:propertyId/settings",
+  requireEffectivePermission(PERMISSIONS.PROPERTY_WRITE),
+  patchPropertySettingsController
+);
+propertyModuleRouter.post(
+  "/property/:propertyId/employees",
+  requireEffectivePermission(PERMISSIONS.EMPLOYEE_WRITE),
+  createPropertyEmployeeController
+);

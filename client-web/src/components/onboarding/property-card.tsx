@@ -9,9 +9,10 @@ type PropertyCardProps = {
   property: Property;
   selected: boolean;
   onSelect: (propertyId: string) => void;
+  onOpenDashboard?: (propertyId: string) => void;
 };
 
-export function PropertyCard({ property, selected, onSelect }: PropertyCardProps) {
+export function PropertyCard({ property, selected, onSelect, onOpenDashboard }: PropertyCardProps) {
   const shouldReduceMotion = useReducedMotion();
   const addressSummary =
     [property.city, property.stateRegion, property.countryCode].filter(Boolean).join(", ") ||
@@ -55,6 +56,11 @@ export function PropertyCard({ property, selected, onSelect }: PropertyCardProps
               {property.timezone}
             </span>
           </div>
+          {onOpenDashboard ? (
+            <div className="flex justify-end">
+              <span className="text-sm font-medium text-foreground">Open property dashboard</span>
+            </div>
+          ) : null}
         </CardContent>
       </Card>
     </motion.button>

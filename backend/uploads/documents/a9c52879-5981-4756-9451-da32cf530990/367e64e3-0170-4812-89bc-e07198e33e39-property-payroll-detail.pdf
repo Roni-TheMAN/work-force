@@ -1,0 +1,919 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 11 0 R /MediaBox [ 0 0 828 612 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/Contents 12 0 R /MediaBox [ 0 0 828 612 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/Contents 13 0 R /MediaBox [ 0 0 828 612 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/Contents 14 0 R /MediaBox [ 0 0 828 612 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/PageMode /UseNone /Pages 10 0 R /Type /Catalog
+>>
+endobj
+9 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260422192246-04'00') /Creator (anonymous) /Keywords () /ModDate (D:20260422192246-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+10 0 obj
+<<
+/Count 4 /Kids [ 4 0 R 5 0 R 6 0 R 7 0 R ] /Type /Pages
+>>
+endobj
+11 0 obj
+<<
+/Length 3365
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+BT /F2 22 Tf 26.4 TL ET
+BT 1 0 0 1 24 536 Tm (DETAIL PAYROLL REPORT) Tj T* ET
+BT /F1 11 Tf 13.2 TL ET
+BT 1 0 0 1 24 516 Tm (Property: Candlewood Suites) Tj T* ET
+BT 1 0 0 1 24 500 Tm (Payroll Run: Version 1) Tj T* ET
+BT 1 0 0 1 24 484 Tm (Pay Period: Apr 12 - Apr 18, 2026) Tj T* ET
+BT 1 0 0 1 24 468 Tm (Generated: 4/22/2026, 4:22 PM) Tj T* ET
+1 1 1 rg
+.772549 .796078 .827451 RG
+n
+36 350 m
+192 350 l
+198.6336 350 204 355.3664 204 362 c
+204 420 l
+204 426.6336 198.6336 432 192 432 c
+36 432 l
+29.3664 432 24 426.6336 24 420 c
+24 362 l
+24 355.3664 29.3664 350 36 350 c
+h
+B*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 38 408 Tm (Employees) Tj T* ET
+BT /F2 18 Tf 21.6 TL ET
+BT 1 0 0 1 38 380 Tm (3) Tj T* ET
+1 1 1 rg
+.772549 .796078 .827451 RG
+n
+228 350 m
+384 350 l
+390.6336 350 396 355.3664 396 362 c
+396 420 l
+396 426.6336 390.6336 432 384 432 c
+228 432 l
+221.3664 432 216 426.6336 216 420 c
+216 362 l
+216 355.3664 221.3664 350 228 350 c
+h
+B*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 230 408 Tm (Regular Hours) Tj T* ET
+BT /F2 18 Tf 21.6 TL ET
+BT 1 0 0 1 230 380 Tm (120.00) Tj T* ET
+1 1 1 rg
+.772549 .796078 .827451 RG
+n
+420 350 m
+576 350 l
+582.6336 350 588 355.3664 588 362 c
+588 420 l
+588 426.6336 582.6336 432 576 432 c
+420 432 l
+413.3664 432 408 426.6336 408 420 c
+408 362 l
+408 355.3664 413.3664 350 420 350 c
+h
+B*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 422 408 Tm (Overtime Hours) Tj T* ET
+BT /F2 18 Tf 21.6 TL ET
+BT 1 0 0 1 422 380 Tm (49.25) Tj T* ET
+1 1 1 rg
+.772549 .796078 .827451 RG
+n
+612 350 m
+768 350 l
+774.6336 350 780 355.3664 780 362 c
+780 420 l
+780 426.6336 774.6336 432 768 432 c
+612 432 l
+605.3664 432 600 426.6336 600 420 c
+600 362 l
+600 355.3664 605.3664 350 612 350 c
+h
+B*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 614 408 Tm (Estimated Gross) Tj T* ET
+BT /F2 18 Tf 21.6 TL ET
+BT 1 0 0 1 614 380 Tm ($0.00) Tj T* ET
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 24 304 Tm (Exception Legend) Tj T* ET
+BT /F1 10 Tf 12 TL ET
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 24 280 Tm (Manual) Tj T* ET
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 110 280 Tm (Shift was created manually.) Tj T* ET
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 24 262 Tm (Edited) Tj T* ET
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 110 262 Tm (A saved shift was adjusted after the original punch set.) Tj T* ET
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 24 244 Tm (Auto-closed) Tj T* ET
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 110 244 Tm (Shift was closed automatically by payroll rules.) Tj T* ET
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 24 178 Tm (Employee Detail Export) Tj T* ET
+BT 1 0 0 1 24 156 Tm /F1 10 Tf 12 TL 14 TL (This report is sourced only from frozen payroll-run summaries and shift snapshots.) Tj T* (Draft and in-review payroll runs are intentionally excluded from PDF export.) Tj T* (Each employee section includes weekly subtotals, pay-period totals, and frozen approval metadata.) Tj T* ET
+.133333 .133333 .133333 RG
+.8 w
+n 24 568 m 804 568 l S
+n 24 36 m 804 36 l S
+BT /F2 14 Tf 16.8 TL ET
+BT 1 0 0 1 24 584 Tm (DETAIL PAYROLL REPORT) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 572 Tm (Candlewood Suites  |  Version 1  |  WKLY) Tj T* ET
+BT 1 0 0 1 722.7315 584 Tm (Apr 12 - Apr 18, 2026) Tj T* ET
+BT 1 0 0 1 729.812 572 Tm (4/22/2026, 4:22 PM) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 14 Tm (4/22/2026, 4:22 PM) Tj T* ET
+BT 1 0 0 1 760.5225 14 Tm (Page 1 of 4) Tj T* ET
+ 
+endstream
+endobj
+12 0 obj
+<<
+/Length 10063
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+BT /F2 16 Tf 19.2 TL ET
+BT 1 0 0 1 24 554 Tm (Sam BC) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 24 538 Tm (Employee Group: -) Tj T* ET
+BT 1 0 0 1 24 524 Tm (Pay Class: WKLY) Tj T* ET
+BT 1 0 0 1 24 510 Tm (From: 4/12/2026 12:00 AM) Tj T* ET
+BT 1 0 0 1 24 496 Tm (To: 4/18/2026 11:59 PM) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 420 554 Tm (Approval Status: Approved) Tj T* ET
+BT 1 0 0 1 420 538 Tm (Approved By: Roni Patel) Tj T* ET
+BT 1 0 0 1 420 524 Tm (Approved At: 4/21/2026, 6:07 PM) Tj T* ET
+.717647 .741176 .784314 RG
+1 1 1 rg
+n
+430 54 m
+794 54 l
+799.528 54 804 58.472 804 64 c
+804 148 l
+804 153.528 799.528 158 794 158 c
+430 158 l
+424.472 158 420 153.528 420 148 c
+420 64 l
+420 58.472 424.472 54 430 54 c
+h
+B*
+0 0 0 rg
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 432 140 Tm (PAY TYPE) Tj T* ET
+BT 1 0 0 1 500 140 Tm (APPLIED AS) Tj T* ET
+BT 1 0 0 1 570 140 Tm (HOURLY RATE) Tj T* ET
+BT 1 0 0 1 658 140 Tm (MODIFIER) Tj T* ET
+BT 1 0 0 1 720 140 Tm (HOURS) Tj T* ET
+BT 1 0 0 1 748.12 140 Tm (AMOUNT) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 432 122 Tm (OT15) Tj T* ET
+BT 1 0 0 1 504 122 Tm (OT) Tj T* ET
+BT 1 0 0 1 574 122 Tm  T* ET
+BT 1 0 0 1 664 122 Tm (1.5) Tj T* ET
+BT 1 0 0 1 726 122 Tm (17.00) Tj T* ET
+BT 1 0 0 1 769.482 122 Tm ($0.00) Tj T* ET
+BT 1 0 0 1 432 106 Tm (OT2) Tj T* ET
+BT 1 0 0 1 504 106 Tm (OT) Tj T* ET
+BT 1 0 0 1 574 106 Tm  T* ET
+BT 1 0 0 1 664 106 Tm (2.0) Tj T* ET
+BT 1 0 0 1 726 106 Tm (0.00) Tj T* ET
+BT 1 0 0 1 769.482 106 Tm ($0.00) Tj T* ET
+BT 1 0 0 1 432 90 Tm (REG) Tj T* ET
+BT 1 0 0 1 504 90 Tm (REG) Tj T* ET
+BT 1 0 0 1 574 90 Tm  T* ET
+BT 1 0 0 1 664 90 Tm (1.0) Tj T* ET
+BT 1 0 0 1 726 90 Tm (40.00) Tj T* ET
+BT 1 0 0 1 769.482 90 Tm ($0.00) Tj T* ET
+.6 w
+n 432 80 m 792 80 l S
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 432 66 Tm (Totals) Tj T* ET
+BT 1 0 0 1 726 66 Tm (57.00) Tj T* ET
+BT 1 0 0 1 769.482 66 Tm ($0.00) Tj T* ET
+.058824 .090196 .164706 rg
+n 24 460 780 30 re f*
+1 1 1 rg
+BT /F2 7.5 Tf 9 TL ET
+BT 1 0 0 1 27 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Date) Tj T* ET
+BT 1 0 0 1 121 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Actual) Tj T* (In) Tj T* ET
+BT 1 0 0 1 175 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Actual) Tj T* (Out) Tj T* ET
+BT 1 0 0 1 235 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Edited/) Tj T* (Rounded In) Tj T* ET
+BT 1 0 0 1 295 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Edited/) Tj T* (Rounded Out) Tj T* ET
+BT 1 0 0 1 355 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Dept) Tj T* ET
+BT 1 0 0 1 403 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (In/Out hours) Tj T* ET
+BT 1 0 0 1 453 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Daily REG) Tj T* ET
+BT 1 0 0 1 503 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Daily OT) Tj T* ET
+BT 1 0 0 1 549 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Weekly Total) Tj T* ET
+BT 1 0 0 1 605 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Punch Info) Tj T* ET
+0 0 0 rg
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 442 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (Sun, 4/12/2026) Tj T* ET
+BT 1 0 0 1 121 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:00 AM) Tj T* ET
+BT 1 0 0 1 175 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:30 PM) Tj T* ET
+BT 1 0 0 1 235 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:00 AM) Tj T* ET
+BT 1 0 0 1 295 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:30 PM) Tj T* ET
+BT 1 0 0 1 355 449 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 605 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 424 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (Mon, 4/13/2026) Tj T* ET
+BT 1 0 0 1 121 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:30 AM) Tj T* ET
+BT 1 0 0 1 175 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:15 PM) Tj T* ET
+BT 1 0 0 1 235 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:30 AM) Tj T* ET
+BT 1 0 0 1 295 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:15 PM) Tj T* ET
+BT 1 0 0 1 355 431 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 453 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 503 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (16.25) Tj T* ET
+BT 1 0 0 1 605 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 406 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (Tue, 4/14/2026) Tj T* ET
+BT 1 0 0 1 121 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:00 AM) Tj T* ET
+BT 1 0 0 1 175 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:45 PM) Tj T* ET
+BT 1 0 0 1 235 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:00 AM) Tj T* ET
+BT 1 0 0 1 295 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:45 PM) Tj T* ET
+BT 1 0 0 1 355 413 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 453 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 503 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (24.50) Tj T* ET
+BT 1 0 0 1 605 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 388 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (Wed, 4/15/2026) Tj T* ET
+BT 1 0 0 1 121 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (06:45 AM) Tj T* ET
+BT 1 0 0 1 175 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:15 PM) Tj T* ET
+BT 1 0 0 1 235 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (06:45 AM) Tj T* ET
+BT 1 0 0 1 295 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:15 PM) Tj T* ET
+BT 1 0 0 1 355 395 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (32.50) Tj T* ET
+BT 1 0 0 1 605 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 370 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (Thu, 4/16/2026) Tj T* ET
+BT 1 0 0 1 121 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:15 AM) Tj T* ET
+BT 1 0 0 1 175 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:00 PM) Tj T* ET
+BT 1 0 0 1 235 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:15 AM) Tj T* ET
+BT 1 0 0 1 295 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:00 PM) Tj T* ET
+BT 1 0 0 1 355 377 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 453 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (7.50) Tj T* ET
+BT 1 0 0 1 503 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.75) Tj T* ET
+BT 1 0 0 1 549 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (40.75) Tj T* ET
+BT 1 0 0 1 605 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 352 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (Fri, 4/17/2026) Tj T* ET
+BT 1 0 0 1 121 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:00 AM) Tj T* ET
+BT 1 0 0 1 175 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:30 PM) Tj T* ET
+BT 1 0 0 1 235 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:00 AM) Tj T* ET
+BT 1 0 0 1 295 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:30 PM) Tj T* ET
+BT 1 0 0 1 355 359 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 503 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 549 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (48.75) Tj T* ET
+BT 1 0 0 1 605 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 334 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (Sat, 4/18/2026) Tj T* ET
+BT 1 0 0 1 121 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:30 AM) Tj T* ET
+BT 1 0 0 1 175 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:15 PM) Tj T* ET
+BT 1 0 0 1 235 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:30 AM) Tj T* ET
+BT 1 0 0 1 295 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:15 PM) Tj T* ET
+BT 1 0 0 1 355 341 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 453 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 503 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 549 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (57.00) Tj T* ET
+BT 1 0 0 1 605 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+.941176 .941176 .941176 rg
+.827451 .847059 .87451 RG
+n 24 316 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (Pay Period Weekly Totals) Tj T* ET
+BT 1 0 0 1 121 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 175 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 235 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 295 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 355 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (57.00) Tj T* ET
+BT 1 0 0 1 453 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (40.00) Tj T* ET
+BT 1 0 0 1 503 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (17.00) Tj T* ET
+BT 1 0 0 1 549 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 605 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+.894118 .905882 .921569 rg
+.827451 .847059 .87451 RG
+n 24 298 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (Pay Period Totals) Tj T* ET
+BT 1 0 0 1 121 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 175 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 235 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 295 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 355 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (57.00) Tj T* ET
+BT 1 0 0 1 453 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (40.00) Tj T* ET
+BT 1 0 0 1 503 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (17.00) Tj T* ET
+BT 1 0 0 1 549 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 605 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+.133333 .133333 .133333 RG
+.8 w
+n 24 568 m 804 568 l S
+n 24 36 m 804 36 l S
+BT /F2 14 Tf 16.8 TL ET
+BT 1 0 0 1 24 584 Tm (DETAIL PAYROLL REPORT) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 572 Tm (Candlewood Suites  |  Version 1  |  WKLY) Tj T* ET
+BT 1 0 0 1 772.3545 584 Tm (Sam BC) Tj T* ET
+BT 1 0 0 1 722.7315 572 Tm (Apr 12 - Apr 18, 2026) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 14 Tm (4/22/2026, 4:22 PM) Tj T* ET
+BT 1 0 0 1 760.5225 14 Tm (Page 2 of 4) Tj T* ET
+ 
+endstream
+endobj
+13 0 obj
+<<
+/Length 10079
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+BT /F2 16 Tf 19.2 TL ET
+BT 1 0 0 1 24 554 Tm (Tanya Krochovh) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 24 538 Tm (Employee Group: -) Tj T* ET
+BT 1 0 0 1 24 524 Tm (Pay Class: WKLY) Tj T* ET
+BT 1 0 0 1 24 510 Tm (From: 4/12/2026 12:00 AM) Tj T* ET
+BT 1 0 0 1 24 496 Tm (To: 4/18/2026 11:59 PM) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 420 554 Tm (Approval Status: Approved) Tj T* ET
+BT 1 0 0 1 420 538 Tm (Approved By: Roni Patel) Tj T* ET
+BT 1 0 0 1 420 524 Tm (Approved At: 4/21/2026, 6:07 PM) Tj T* ET
+.717647 .741176 .784314 RG
+1 1 1 rg
+n
+430 54 m
+794 54 l
+799.528 54 804 58.472 804 64 c
+804 148 l
+804 153.528 799.528 158 794 158 c
+430 158 l
+424.472 158 420 153.528 420 148 c
+420 64 l
+420 58.472 424.472 54 430 54 c
+h
+B*
+0 0 0 rg
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 432 140 Tm (PAY TYPE) Tj T* ET
+BT 1 0 0 1 500 140 Tm (APPLIED AS) Tj T* ET
+BT 1 0 0 1 570 140 Tm (HOURLY RATE) Tj T* ET
+BT 1 0 0 1 658 140 Tm (MODIFIER) Tj T* ET
+BT 1 0 0 1 720 140 Tm (HOURS) Tj T* ET
+BT 1 0 0 1 748.12 140 Tm (AMOUNT) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 432 122 Tm (OT15) Tj T* ET
+BT 1 0 0 1 504 122 Tm (OT) Tj T* ET
+BT 1 0 0 1 574 122 Tm  T* ET
+BT 1 0 0 1 664 122 Tm (1.5) Tj T* ET
+BT 1 0 0 1 726 122 Tm (15.50) Tj T* ET
+BT 1 0 0 1 769.482 122 Tm ($0.00) Tj T* ET
+BT 1 0 0 1 432 106 Tm (OT2) Tj T* ET
+BT 1 0 0 1 504 106 Tm (OT) Tj T* ET
+BT 1 0 0 1 574 106 Tm  T* ET
+BT 1 0 0 1 664 106 Tm (2.0) Tj T* ET
+BT 1 0 0 1 726 106 Tm (0.00) Tj T* ET
+BT 1 0 0 1 769.482 106 Tm ($0.00) Tj T* ET
+BT 1 0 0 1 432 90 Tm (REG) Tj T* ET
+BT 1 0 0 1 504 90 Tm (REG) Tj T* ET
+BT 1 0 0 1 574 90 Tm  T* ET
+BT 1 0 0 1 664 90 Tm (1.0) Tj T* ET
+BT 1 0 0 1 726 90 Tm (40.00) Tj T* ET
+BT 1 0 0 1 769.482 90 Tm ($0.00) Tj T* ET
+.6 w
+n 432 80 m 792 80 l S
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 432 66 Tm (Totals) Tj T* ET
+BT 1 0 0 1 726 66 Tm (55.50) Tj T* ET
+BT 1 0 0 1 769.482 66 Tm ($0.00) Tj T* ET
+.058824 .090196 .164706 rg
+n 24 460 780 30 re f*
+1 1 1 rg
+BT /F2 7.5 Tf 9 TL ET
+BT 1 0 0 1 27 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Date) Tj T* ET
+BT 1 0 0 1 121 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Actual) Tj T* (In) Tj T* ET
+BT 1 0 0 1 175 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Actual) Tj T* (Out) Tj T* ET
+BT 1 0 0 1 235 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Edited/) Tj T* (Rounded In) Tj T* ET
+BT 1 0 0 1 295 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Edited/) Tj T* (Rounded Out) Tj T* ET
+BT 1 0 0 1 355 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Dept) Tj T* ET
+BT 1 0 0 1 403 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (In/Out hours) Tj T* ET
+BT 1 0 0 1 453 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Daily REG) Tj T* ET
+BT 1 0 0 1 503 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Daily OT) Tj T* ET
+BT 1 0 0 1 549 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Weekly Total) Tj T* ET
+BT 1 0 0 1 605 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Punch Info) Tj T* ET
+0 0 0 rg
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 442 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (Sun, 4/12/2026) Tj T* ET
+BT 1 0 0 1 121 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (02:00 PM) Tj T* ET
+BT 1 0 0 1 175 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:30 PM) Tj T* ET
+BT 1 0 0 1 235 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (02:00 PM) Tj T* ET
+BT 1 0 0 1 295 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:30 PM) Tj T* ET
+BT 1 0 0 1 355 449 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 605 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 424 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (Mon, 4/13/2026) Tj T* ET
+BT 1 0 0 1 121 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (01:30 PM) Tj T* ET
+BT 1 0 0 1 175 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:00 PM) Tj T* ET
+BT 1 0 0 1 235 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (01:30 PM) Tj T* ET
+BT 1 0 0 1 295 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:00 PM) Tj T* ET
+BT 1 0 0 1 355 431 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (16.00) Tj T* ET
+BT 1 0 0 1 605 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 406 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (Tue, 4/14/2026) Tj T* ET
+BT 1 0 0 1 121 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:00 PM) Tj T* ET
+BT 1 0 0 1 175 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (11:00 PM) Tj T* ET
+BT 1 0 0 1 235 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (03:00 PM) Tj T* ET
+BT 1 0 0 1 295 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (11:00 PM) Tj T* ET
+BT 1 0 0 1 355 413 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (7.50) Tj T* ET
+BT 1 0 0 1 453 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (7.50) Tj T* ET
+BT 1 0 0 1 503 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (23.50) Tj T* ET
+BT 1 0 0 1 605 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 388 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (Wed, 4/15/2026) Tj T* ET
+BT 1 0 0 1 121 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (02:15 PM) Tj T* ET
+BT 1 0 0 1 175 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:45 PM) Tj T* ET
+BT 1 0 0 1 235 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (02:15 PM) Tj T* ET
+BT 1 0 0 1 295 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:45 PM) Tj T* ET
+BT 1 0 0 1 355 395 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (31.50) Tj T* ET
+BT 1 0 0 1 605 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 370 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (Thu, 4/16/2026) Tj T* ET
+BT 1 0 0 1 121 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (01:00 PM) Tj T* ET
+BT 1 0 0 1 175 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (09:30 PM) Tj T* ET
+BT 1 0 0 1 235 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (01:00 PM) Tj T* ET
+BT 1 0 0 1 295 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (09:30 PM) Tj T* ET
+BT 1 0 0 1 355 377 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (39.50) Tj T* ET
+BT 1 0 0 1 605 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 352 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (Fri, 4/17/2026) Tj T* ET
+BT 1 0 0 1 121 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (02:00 PM) Tj T* ET
+BT 1 0 0 1 175 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:30 PM) Tj T* ET
+BT 1 0 0 1 235 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (02:00 PM) Tj T* ET
+BT 1 0 0 1 295 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:30 PM) Tj T* ET
+BT 1 0 0 1 355 359 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.50) Tj T* ET
+BT 1 0 0 1 503 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (7.50) Tj T* ET
+BT 1 0 0 1 549 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (47.50) Tj T* ET
+BT 1 0 0 1 605 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 334 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (Sat, 4/18/2026) Tj T* ET
+BT 1 0 0 1 121 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (01:30 PM) Tj T* ET
+BT 1 0 0 1 175 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:00 PM) Tj T* ET
+BT 1 0 0 1 235 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (01:30 PM) Tj T* ET
+BT 1 0 0 1 295 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (10:00 PM) Tj T* ET
+BT 1 0 0 1 355 341 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 503 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 549 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (55.50) Tj T* ET
+BT 1 0 0 1 605 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+.941176 .941176 .941176 rg
+.827451 .847059 .87451 RG
+n 24 316 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (Pay Period Weekly Totals) Tj T* ET
+BT 1 0 0 1 121 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 175 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 235 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 295 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 355 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (55.50) Tj T* ET
+BT 1 0 0 1 453 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (40.00) Tj T* ET
+BT 1 0 0 1 503 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (15.50) Tj T* ET
+BT 1 0 0 1 549 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 605 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+.894118 .905882 .921569 rg
+.827451 .847059 .87451 RG
+n 24 298 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (Pay Period Totals) Tj T* ET
+BT 1 0 0 1 121 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 175 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 235 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 295 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 355 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (55.50) Tj T* ET
+BT 1 0 0 1 453 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (40.00) Tj T* ET
+BT 1 0 0 1 503 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (15.50) Tj T* ET
+BT 1 0 0 1 549 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 605 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+.133333 .133333 .133333 RG
+.8 w
+n 24 568 m 804 568 l S
+n 24 36 m 804 36 l S
+BT /F2 14 Tf 16.8 TL ET
+BT 1 0 0 1 24 584 Tm (DETAIL PAYROLL REPORT) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 572 Tm (Candlewood Suites  |  Version 1  |  WKLY) Tj T* ET
+BT 1 0 0 1 742.1115 584 Tm (Tanya Krochovh) Tj T* ET
+BT 1 0 0 1 722.7315 572 Tm (Apr 12 - Apr 18, 2026) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 14 Tm (4/22/2026, 4:22 PM) Tj T* ET
+BT 1 0 0 1 760.5225 14 Tm (Page 3 of 4) Tj T* ET
+ 
+endstream
+endobj
+14 0 obj
+<<
+/Length 10071
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+BT /F2 16 Tf 19.2 TL ET
+BT 1 0 0 1 24 554 Tm (Roni Patel) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 24 538 Tm (Employee Group: -) Tj T* ET
+BT 1 0 0 1 24 524 Tm (Pay Class: WKLY) Tj T* ET
+BT 1 0 0 1 24 510 Tm (From: 4/12/2026 12:00 AM) Tj T* ET
+BT 1 0 0 1 24 496 Tm (To: 4/18/2026 11:59 PM) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 420 554 Tm (Approval Status: Approved) Tj T* ET
+BT 1 0 0 1 420 538 Tm (Approved By: Roni Patel) Tj T* ET
+BT 1 0 0 1 420 524 Tm (Approved At: 4/21/2026, 6:07 PM) Tj T* ET
+.717647 .741176 .784314 RG
+1 1 1 rg
+n
+430 54 m
+794 54 l
+799.528 54 804 58.472 804 64 c
+804 148 l
+804 153.528 799.528 158 794 158 c
+430 158 l
+424.472 158 420 153.528 420 148 c
+420 64 l
+420 58.472 424.472 54 430 54 c
+h
+B*
+0 0 0 rg
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 432 140 Tm (PAY TYPE) Tj T* ET
+BT 1 0 0 1 500 140 Tm (APPLIED AS) Tj T* ET
+BT 1 0 0 1 570 140 Tm (HOURLY RATE) Tj T* ET
+BT 1 0 0 1 658 140 Tm (MODIFIER) Tj T* ET
+BT 1 0 0 1 720 140 Tm (HOURS) Tj T* ET
+BT 1 0 0 1 748.12 140 Tm (AMOUNT) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 432 122 Tm (OT15) Tj T* ET
+BT 1 0 0 1 504 122 Tm (OT) Tj T* ET
+BT 1 0 0 1 574 122 Tm  T* ET
+BT 1 0 0 1 664 122 Tm (1.5) Tj T* ET
+BT 1 0 0 1 726 122 Tm (16.75) Tj T* ET
+BT 1 0 0 1 769.482 122 Tm ($0.00) Tj T* ET
+BT 1 0 0 1 432 106 Tm (OT2) Tj T* ET
+BT 1 0 0 1 504 106 Tm (OT) Tj T* ET
+BT 1 0 0 1 574 106 Tm  T* ET
+BT 1 0 0 1 664 106 Tm (2.0) Tj T* ET
+BT 1 0 0 1 726 106 Tm (0.00) Tj T* ET
+BT 1 0 0 1 769.482 106 Tm ($0.00) Tj T* ET
+BT 1 0 0 1 432 90 Tm (REG) Tj T* ET
+BT 1 0 0 1 504 90 Tm (REG) Tj T* ET
+BT 1 0 0 1 574 90 Tm  T* ET
+BT 1 0 0 1 664 90 Tm (1.0) Tj T* ET
+BT 1 0 0 1 726 90 Tm (40.00) Tj T* ET
+BT 1 0 0 1 769.482 90 Tm ($0.00) Tj T* ET
+.6 w
+n 432 80 m 792 80 l S
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 432 66 Tm (Totals) Tj T* ET
+BT 1 0 0 1 726 66 Tm (56.75) Tj T* ET
+BT 1 0 0 1 769.482 66 Tm ($0.00) Tj T* ET
+.058824 .090196 .164706 rg
+n 24 460 780 30 re f*
+1 1 1 rg
+BT /F2 7.5 Tf 9 TL ET
+BT 1 0 0 1 27 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Date) Tj T* ET
+BT 1 0 0 1 121 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Actual) Tj T* (In) Tj T* ET
+BT 1 0 0 1 175 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Actual) Tj T* (Out) Tj T* ET
+BT 1 0 0 1 235 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Edited/) Tj T* (Rounded In) Tj T* ET
+BT 1 0 0 1 295 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Edited/) Tj T* (Rounded Out) Tj T* ET
+BT 1 0 0 1 355 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Dept) Tj T* ET
+BT 1 0 0 1 403 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (In/Out hours) Tj T* ET
+BT 1 0 0 1 453 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Daily REG) Tj T* ET
+BT 1 0 0 1 503 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Daily OT) Tj T* ET
+BT 1 0 0 1 549 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Weekly Total) Tj T* ET
+BT 1 0 0 1 605 479 Tm /F2 7.3 Tf 8.76 TL 8 TL (Punch Info) Tj T* ET
+0 0 0 rg
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 442 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (Sun, 4/12/2026) Tj T* ET
+BT 1 0 0 1 121 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:00 AM) Tj T* ET
+BT 1 0 0 1 175 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:30 PM) Tj T* ET
+BT 1 0 0 1 235 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:00 AM) Tj T* ET
+BT 1 0 0 1 295 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:30 PM) Tj T* ET
+BT 1 0 0 1 355 449 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 605 449 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 424 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (Mon, 4/13/2026) Tj T* ET
+BT 1 0 0 1 121 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:15 AM) Tj T* ET
+BT 1 0 0 1 175 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:00 PM) Tj T* ET
+BT 1 0 0 1 235 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:15 AM) Tj T* ET
+BT 1 0 0 1 295 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:00 PM) Tj T* ET
+BT 1 0 0 1 355 431 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 453 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 503 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (16.25) Tj T* ET
+BT 1 0 0 1 605 431 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 406 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (Tue, 4/14/2026) Tj T* ET
+BT 1 0 0 1 121 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:45 AM) Tj T* ET
+BT 1 0 0 1 175 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:15 PM) Tj T* ET
+BT 1 0 0 1 235 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (07:45 AM) Tj T* ET
+BT 1 0 0 1 295 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:15 PM) Tj T* ET
+BT 1 0 0 1 355 413 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (24.25) Tj T* ET
+BT 1 0 0 1 605 413 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 388 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (Wed, 4/15/2026) Tj T* ET
+BT 1 0 0 1 121 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (09:00 AM) Tj T* ET
+BT 1 0 0 1 175 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:30 PM) Tj T* ET
+BT 1 0 0 1 235 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (09:00 AM) Tj T* ET
+BT 1 0 0 1 295 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:30 PM) Tj T* ET
+BT 1 0 0 1 355 395 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 503 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 549 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (32.25) Tj T* ET
+BT 1 0 0 1 605 395 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 370 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (Thu, 4/16/2026) Tj T* ET
+BT 1 0 0 1 121 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:30 AM) Tj T* ET
+BT 1 0 0 1 175 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:15 PM) Tj T* ET
+BT 1 0 0 1 235 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:30 AM) Tj T* ET
+BT 1 0 0 1 295 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:15 PM) Tj T* ET
+BT 1 0 0 1 355 377 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 453 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (7.75) Tj T* ET
+BT 1 0 0 1 503 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.50) Tj T* ET
+BT 1 0 0 1 549 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (40.50) Tj T* ET
+BT 1 0 0 1 605 377 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 352 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (Fri, 4/17/2026) Tj T* ET
+BT 1 0 0 1 121 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:00 AM) Tj T* ET
+BT 1 0 0 1 175 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:30 PM) Tj T* ET
+BT 1 0 0 1 235 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:00 AM) Tj T* ET
+BT 1 0 0 1 295 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (04:30 PM) Tj T* ET
+BT 1 0 0 1 355 359 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 453 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 503 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.00) Tj T* ET
+BT 1 0 0 1 549 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (48.50) Tj T* ET
+BT 1 0 0 1 605 359 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+1 1 1 rg
+.827451 .847059 .87451 RG
+n 24 334 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (Sat, 4/18/2026) Tj T* ET
+BT 1 0 0 1 121 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:15 AM) Tj T* ET
+BT 1 0 0 1 175 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:00 PM) Tj T* ET
+BT 1 0 0 1 235 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (08:15 AM) Tj T* ET
+BT 1 0 0 1 295 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (05:00 PM) Tj T* ET
+BT 1 0 0 1 355 341 Tm /F1 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 453 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (0.00) Tj T* ET
+BT 1 0 0 1 503 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (8.25) Tj T* ET
+BT 1 0 0 1 549 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (56.75) Tj T* ET
+BT 1 0 0 1 605 341 Tm /F1 7.2 Tf 8.64 TL 8 TL (Manual) Tj T* ET
+.941176 .941176 .941176 rg
+.827451 .847059 .87451 RG
+n 24 316 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (Pay Period Weekly Totals) Tj T* ET
+BT 1 0 0 1 121 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 175 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 235 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 295 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 355 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (56.75) Tj T* ET
+BT 1 0 0 1 453 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (40.00) Tj T* ET
+BT 1 0 0 1 503 323 Tm /F2 7.2 Tf 8.64 TL 8 TL (16.75) Tj T* ET
+BT 1 0 0 1 549 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 605 323 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+.894118 .905882 .921569 rg
+.827451 .847059 .87451 RG
+n 24 298 780 18 re B*
+0 0 0 rg
+BT 1 0 0 1 27 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (Pay Period Totals) Tj T* ET
+BT 1 0 0 1 121 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 175 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 235 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 295 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 355 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 403 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (56.75) Tj T* ET
+BT 1 0 0 1 453 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (40.00) Tj T* ET
+BT 1 0 0 1 503 305 Tm /F2 7.2 Tf 8.64 TL 8 TL (16.75) Tj T* ET
+BT 1 0 0 1 549 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+BT 1 0 0 1 605 305 Tm /F2 7.2 Tf 8.64 TL 8 TL  T* ET
+.133333 .133333 .133333 RG
+.8 w
+n 24 568 m 804 568 l S
+n 24 36 m 804 36 l S
+BT /F2 14 Tf 16.8 TL ET
+BT 1 0 0 1 24 584 Tm (DETAIL PAYROLL REPORT) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 572 Tm (Candlewood Suites  |  Version 1  |  WKLY) Tj T* ET
+BT 1 0 0 1 764.7895 584 Tm (Roni Patel) Tj T* ET
+BT 1 0 0 1 722.7315 572 Tm (Apr 12 - Apr 18, 2026) Tj T* ET
+BT /F1 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 24 14 Tm (4/22/2026, 4:22 PM) Tj T* ET
+BT 1 0 0 1 760.5225 14 Tm (Page 4 of 4) Tj T* ET
+ 
+endstream
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000516 00000 n 
+0000000711 00000 n 
+0000000906 00000 n 
+0000001101 00000 n 
+0000001170 00000 n 
+0000001431 00000 n 
+0000001509 00000 n 
+0000004926 00000 n 
+0000015042 00000 n 
+0000025174 00000 n 
+trailer
+<<
+/ID 
+[<f80e84f71b6c83a04dd4baebe6ae2bde><f80e84f71b6c83a04dd4baebe6ae2bde>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 9 0 R
+/Root 8 0 R
+/Size 15
+>>
+startxref
+35298
+%%EOF

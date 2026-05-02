@@ -1,5 +1,5 @@
-import { OrganizationDashboard } from "@/components/dashboard/organization-dashboard";
+import { DashboardScreen } from "@/pages/dashboard";
 
 export function DashboardPage() {
-  return <OrganizationDashboard />;
+  return <DashboardScreen />;
 }

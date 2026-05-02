@@ -50,7 +50,7 @@ export const organizationPlans: Plan[] = [
   {
     id: "pro",
     name: "Pro",
-    price: "$79 / month",
+    price: "$49.99 / month",
     description: "Built for growing operators managing multiple locations and team leads.",
     features: [
       "Unlimited properties",
@@ -64,7 +64,7 @@ export const organizationPlans: Plan[] = [
   {
     id: "enterprise",
     name: "Enterprise",
-    price: "Custom",
+    price: "$199 / month",
     description: "For multi-brand teams that need controls, provisioning, and rollout support.",
     features: [
       "Advanced tenant governance",

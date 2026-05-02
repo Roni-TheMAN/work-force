@@ -58,6 +58,10 @@ export async function signUpWithPassword(email: string, password: string, fullNa
     throw error;
   }
 
+  if (!data.session && Array.isArray(data.user?.identities) && data.user.identities.length === 0) {
+    throw new Error("User already registered");
+  }
+
   return data;
 }
 

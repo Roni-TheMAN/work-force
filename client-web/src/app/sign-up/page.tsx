@@ -6,7 +6,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { checkSignUpEmailExists } from "@/lib/api";
 import { useAuth } from "@/providers/auth-provider";
+
+function getSignUpErrorMessage(error: unknown) {
+  if (error instanceof Error) {
+    const normalizedMessage = error.message.toLowerCase();
+
+    if (normalizedMessage.includes("already registered") || normalizedMessage.includes("already exists")) {
+      return "An account with this email already exists. Sign in instead or use a different email.";
+    }
+
+    return error.message;
+  }
+
+  return "Unable to create your account.";
+}
 
 export function SignUpPage() {
   const navigate = useNavigate();
@@ -31,10 +46,19 @@ export function SignUpPage() {
       return;
     }
 
+    const normalizedEmail = email.trim().toLowerCase();
+
     setIsSubmitting(true);
 
     try {
-      const session = await signUp(email.trim(), password, fullName.trim(), phone.trim());
+      const emailExists = await checkSignUpEmailExists(normalizedEmail);
+
+      if (emailExists) {
+        setErrorMessage("An account with this email already exists. Sign in instead or use a different email.");
+        return;
+      }
+
+      const session = await signUp(normalizedEmail, password, fullName.trim(), phone.trim());
 
       if (session) {
         navigate("/quick-dash", { replace: true });
@@ -43,7 +67,7 @@ export function SignUpPage() {
 
       setSuccessMessage("Account created. Confirm your email in Supabase, then sign in.");
     } catch (error) {
-      setErrorMessage(error instanceof Error ? error.message : "Unable to create your account.");
+      setErrorMessage(getSignUpErrorMessage(error));
     } finally {
       setIsSubmitting(false);
     }

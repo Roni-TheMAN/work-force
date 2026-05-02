@@ -45,4 +45,15 @@ export const env = {
   clientWebUrl,
   appDomain: trimTrailingSlash(getOptionalEnv("APP_DOMAIN", clientWebUrl) ?? clientWebUrl),
   stripeSecretKey: getOptionalEnv("STRIPE_SECRET_KEY"),
+  stripeWebhookSecret: getOptionalEnv("STRIPE_WEBHOOK_SECRET"),
+  employeePinSecret: getOptionalEnv("EMPLOYEE_PIN_SECRET"),
+  docusealApiUrl: trimTrailingSlash(getOptionalEnv("DOCUSEAL_API_URL", "https://api.docuseal.com") ?? "https://api.docuseal.com"),
+  docusealApiKey: getOptionalEnv("DOCUSEAL_API_KEY"),
+  docusealEmbedHost: trimTrailingSlash(getOptionalEnv("DOCUSEAL_EMBED_HOST", "https://docuseal.com") ?? "https://docuseal.com"),
+  docusealAdminEmail: getOptionalEnv("DOCUSEAL_ADMIN_EMAIL", getOptionalEnv("DOCUSEAL_USER_EMAIL")),
+  docusealUserEmail: getOptionalEnv("DOCUSEAL_USER_EMAIL"),
+  docusealWebhookSecret: getOptionalEnv("DOCUSEAL_WEBHOOK_SECRET"),
+  documentUploadPublicBaseUrl: getOptionalEnv("DOCUMENT_UPLOAD_PUBLIC_BASE_URL")
+    ? trimTrailingSlash(getOptionalEnv("DOCUMENT_UPLOAD_PUBLIC_BASE_URL") as string)
+    : undefined,
 };

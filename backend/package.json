@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
+    "test": "node --import tsx --test src/services/organization.service.test.ts src/services/seedRoles.test.ts src/services/time-permissions.test.ts src/modules/documents/document.service.test.ts src/modules/property/property-payroll-runs.test.ts src/modules/property/property-payroll-detail-report.test.ts src/modules/property/property-scheduling.test.ts",
     "start": "node dist/index.js",
+    "seed:essentials": "tsx scripts/seed-essentials.ts",
+    "seed:billing": "tsx scripts/seed-billing-catalog.ts",
+    "seed:boost-demo": "tsx scripts/seed-boost-demo.ts",
+    "seed:test": "tsx scripts/seed-test-data.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
   },
@@ -16,11 +21,15 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jose": "^6.2.2",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1",
     "stripe": "^20.4.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.1.0",
     "@types/node": "^22.13.10",
     "prisma": "^6.5.0",
     "tsx": "^4.19.3",

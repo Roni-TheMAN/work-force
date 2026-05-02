@@ -1,9 +1,14 @@
-import { Prisma } from "../generated/prisma";
+import { Prisma } from "../../generated/prisma-rbac";
 
 import { prisma } from "../lib/prisma";
+import { PERMISSIONS } from "../lib/permissions";
 import type { AuthenticatedSupabaseUser } from "../lib/supabase-auth";
 import { HttpError } from "../lib/http-error";
+import { getNumericOrganizationEntitlement } from "./billing-entitlements.service";
+import { getUserPermissions } from "./rbac.service";
 import { toClientProperty, type ClientProperty } from "./organization.service";
+import { ensureOrganizationBillingState } from "./stripe-billing.service";
+import { syncAuthenticatedUser } from "./user-sync.service";
 
 export type PropertyStatus = "active" | "inactive" | "archived";
 
@@ -36,32 +41,18 @@ function normalizeCode(value: string | null | undefined): string | null {
 }
 
 async function ensureUserExists(authUser: AuthenticatedSupabaseUser) {
-  return prisma.user.upsert({
-    where: { id: authUser.id },
-    update: {
-      email: authUser.email,
-      fullName: authUser.fullName,
-      phone: authUser.phone,
-      avatarUrl: authUser.avatarUrl,
-    },
-    create: {
-      id: authUser.id,
-      email: authUser.email,
-      fullName: authUser.fullName,
-      phone: authUser.phone,
-      avatarUrl: authUser.avatarUrl,
-    },
-  });
+  return syncAuthenticatedUser(authUser);
 }
 
 async function requireOrganizationAccess(
   authUser: AuthenticatedSupabaseUser,
   organizationId: string
 ) {
+  const localUser = await ensureUserExists(authUser);
   const membership = await prisma.organizationMember.findFirst({
     where: {
       organizationId,
-      userId: authUser.id,
+      userId: localUser.id,
       status: "active",
     },
     include: {
@@ -73,8 +64,10 @@ async function requireOrganizationAccess(
     throw new HttpError(403, "You do not have access to that organization.");
   }
 
-  if (!["owner", "admin", "manager"].includes(membership.role)) {
-    throw new HttpError(403, "Your organization role cannot create properties.");
+  const permissions = await getUserPermissions(localUser.id, organizationId);
+
+  if (!permissions.has(PERMISSIONS.PROPERTY_WRITE)) {
+    throw new HttpError(403, "You do not have permission to create properties.");
   }
 
   return membership;
@@ -86,6 +79,31 @@ export async function createPropertyForAuthenticatedUser(
 ): Promise<ClientProperty> {
   await ensureUserExists(authUser);
   await requireOrganizationAccess(authUser, input.organizationId);
+
+  let [propertyLimit, propertyCount] = await Promise.all([
+    getNumericOrganizationEntitlement(input.organizationId, "max_properties"),
+    prisma.property.count({
+      where: {
+        organizationId: input.organizationId,
+      },
+    }),
+  ]);
+
+  if (propertyLimit === null) {
+    await ensureOrganizationBillingState(input.organizationId);
+    propertyLimit = await getNumericOrganizationEntitlement(input.organizationId, "max_properties");
+  }
+
+  if (propertyLimit === null) {
+    throw new HttpError(403, "Organization property entitlements are not configured.");
+  }
+
+  if (propertyCount >= propertyLimit) {
+    throw new HttpError(
+      409,
+      `This organization has reached its property limit of ${propertyLimit}. Upgrade billing or add capacity before creating another property.`
+    );
+  }
 
   try {
     const property = await prisma.property.create({

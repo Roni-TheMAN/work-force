@@ -3,20 +3,20 @@
     "name": "kiosk-app",
     "slug": "kiosk-app",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#faf7f1"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#f5ede2",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -25,6 +25,23 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to scan pairing QR codes and capture clock verification photos.",
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-font",
+      "expo-sqlite"
+    ],
+    "extra": {
+      "backendUrl": "http://localhost:4000",
+      "supabaseUrl": "https://your-project-ref.supabase.co",
+      "supabaseAnonKey": "your-supabase-anon-or-publishable-key"
     }
   }
 }

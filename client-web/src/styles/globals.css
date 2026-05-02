@@ -78,3 +78,34 @@
 .google-place-autocomplete::part(prediction-item-secondary-text) {
   color: hsl(var(--muted-foreground));
 }
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .schedule-print-root {
+    break-inside: avoid;
+    width: 100%;
+  }
+
+  .schedule-print-root * {
+    box-shadow: none !important;
+  }
+
+  .schedule-print-root button,
+  .schedule-print-root [role="button"] {
+    outline: none !important;
+  }
+}
