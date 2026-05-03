@@ -68,6 +68,17 @@ async function migrate(database: SQLite.SQLiteDatabase): Promise<void> {
       value TEXT NOT NULL,
       updated_at TEXT NOT NULL
     );
+
+    CREATE TABLE IF NOT EXISTS schedule_week_cache (
+      property_id TEXT NOT NULL,
+      week_start_date TEXT NOT NULL,
+      payload_json TEXT NOT NULL,
+      fetched_at TEXT NOT NULL,
+      PRIMARY KEY (property_id, week_start_date)
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_schedule_week_cache_fetched_at
+      ON schedule_week_cache (fetched_at DESC);
   `);
 }
 

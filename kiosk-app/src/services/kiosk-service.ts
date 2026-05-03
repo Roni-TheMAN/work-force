@@ -3,7 +3,9 @@ import Constants from "expo-constants";
 import { createOfflineClockService } from "./offlineClock.service";
 import { getNetworkStatus, isOnline, subscribeToNetworkStatus, type NetworkStatus } from "./network.service";
 import { syncPendingClockEvents } from "./sync/clockEventSync.service";
+import { fetchAndCacheScheduleWeek, readCachedScheduleWeek, type ScheduleFetchResult } from "./sync/scheduleSync.service";
 import type { SyncClockEventsRequest, SyncClockEventsResponse } from "../types/offlineClock";
+import type { ScheduleWeek } from "../types/schedule";
 import type {
   ClockEventResult,
   CreateClockEventInput,
@@ -92,6 +94,11 @@ export type KioskService = {
   createClockEvent: (input: CreateClockEventInput) => Promise<ClockEventResult>;
   syncPendingClockEvents: (binding: KioskDeviceBinding) => Promise<void>;
   subscribeToNetworkStatus: (listener: (status: NetworkStatus) => void) => () => void;
+  loadScheduleWeek: (
+    binding: KioskDeviceBinding,
+    options?: { weekStartDate?: string | null; preferCache?: boolean }
+  ) => Promise<ScheduleFetchResult>;
+  refreshConnectedData: (binding: KioskDeviceBinding) => Promise<void>;
 };
 
 const configuredBackendBaseUrl =
@@ -810,8 +817,90 @@ export function createKioskService(): KioskService {
       });
     },
 
+    async loadScheduleWeek(binding, options) {
+      const propertyId = binding.property.id;
+      const weekStartDate = options?.weekStartDate ?? null;
+      const preferCache = options?.preferCache === true;
+      const online = isOnline(await getNetworkStatus());
+
+      if (preferCache || !online || !activeDeviceAuthToken) {
+        const cached = await readCachedScheduleWeek({ propertyId, weekStartDate });
+
+        if (cached.week || !online || !activeDeviceAuthToken) {
+          return cached;
+        }
+      }
+
+      return fetchAndCacheScheduleWeek({
+        propertyId,
+        weekStartDate,
+        network: async ({ weekStartDate: requestedWeekStartDate }) => {
+          const query = requestedWeekStartDate
+            ? `?weekStartDate=${encodeURIComponent(requestedWeekStartDate)}`
+            : "";
+
+          return requestBackend<{ week: ScheduleWeek }>(
+            `/api/public/time/devices/schedule/week${query}`,
+            {
+              deviceToken: activeDeviceAuthToken,
+            }
+          );
+        },
+      });
+    },
+
     subscribeToNetworkStatus(listener) {
       return subscribeToNetworkStatus(listener);
+    },
+
+    async refreshConnectedData(binding) {
+      if (!activeDeviceAuthToken) {
+        return;
+      }
+
+      if (!isOnline(await getNetworkStatus())) {
+        return;
+      }
+
+      try {
+        await syncPendingClockEvents({
+          binding,
+          postClockEvents: (body: SyncClockEventsRequest) =>
+            requestBackend<SyncClockEventsResponse>("/api/public/time/devices/sync/clock-events", {
+              deviceToken: activeDeviceAuthToken,
+              method: "POST",
+              body,
+            }),
+        });
+      } catch {
+        // Sync engine swallows item-level errors; outer guard absorbs unexpected throws.
+      }
+
+      try {
+        const cached = await readCachedScheduleWeek({
+          propertyId: binding.property.id,
+          weekStartDate: null,
+        });
+
+        await fetchAndCacheScheduleWeek({
+          propertyId: binding.property.id,
+          weekStartDate: cached.week?.weekStartDate ?? null,
+          network: async ({ weekStartDate: requestedWeekStartDate }) => {
+            const query = requestedWeekStartDate
+              ? `?weekStartDate=${encodeURIComponent(requestedWeekStartDate)}`
+              : "";
+
+            return requestBackend<{ week: ScheduleWeek }>(
+              `/api/public/time/devices/schedule/week${query}`,
+              {
+                deviceToken: activeDeviceAuthToken,
+              }
+            );
+          },
+        });
+      } catch {
+        // Schedule refresh is best-effort.
+      }
     },
   };
 }

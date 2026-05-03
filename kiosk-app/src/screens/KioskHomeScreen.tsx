@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { CameraPreviewCard } from "../components/CameraPreviewCard";
@@ -20,6 +20,7 @@ type KioskHomeScreenProps = {
   onOpenAdminPanel: () => void;
   onSubmitPin: (pin: string) => Promise<void>;
   onCaptureReady: (capture: (() => Promise<string | null>) | null) => void;
+  onViewSchedule?: () => void;
 };
 
 export function KioskHomeScreen({
@@ -30,6 +31,7 @@ export function KioskHomeScreen({
   onOpenAdminPanel,
   onSubmitPin,
   onCaptureReady,
+  onViewSchedule,
 }: KioskHomeScreenProps) {
   const { height, width } = useWindowDimensions();
   const isTightWidth = width < 420;
@@ -96,19 +98,31 @@ export function KioskHomeScreen({
               </View>
             </View>
           </HiddenAdminTrigger>
-          {showHeaderBadges ? <View style={styles.headerBadges}>
-            <KioskStatusBadge label={binding ? "Property paired" : "Unpaired"} tone={binding ? "success" : "warning"} />
-            <KioskStatusBadge
-              label={onlineLabel}
-              tone={!binding || health.isOnline === false ? "warning" : "success"}
-            />
-            {pendingSyncCount > 0 ? (
-              <KioskStatusBadge label={`${pendingSyncCount} pending`} tone="warning" />
+          <View style={styles.headerRight}>
+            {onViewSchedule && binding ? (
+              <Pressable
+                onPress={onViewSchedule}
+                style={({ pressed }) => [styles.scheduleButton, pressed ? styles.scheduleButtonPressed : null]}
+                accessibilityLabel="View week schedule"
+              >
+                <MaterialCommunityIcons name="calendar-month-outline" size={18} color={colors.foreground} />
+                <Text style={styles.scheduleButtonLabel}>Schedule</Text>
+              </Pressable>
             ) : null}
-            {conflictCount > 0 ? (
-              <KioskStatusBadge label={`${conflictCount} conflict${conflictCount === 1 ? "" : "s"}`} tone="danger" />
-            ) : null}
-          </View> : null}
+            {showHeaderBadges ? <View style={styles.headerBadges}>
+              <KioskStatusBadge label={binding ? "Property paired" : "Unpaired"} tone={binding ? "success" : "warning"} />
+              <KioskStatusBadge
+                label={onlineLabel}
+                tone={!binding || health.isOnline === false ? "warning" : "success"}
+              />
+              {pendingSyncCount > 0 ? (
+                <KioskStatusBadge label={`${pendingSyncCount} pending`} tone="warning" />
+              ) : null}
+              {conflictCount > 0 ? (
+                <KioskStatusBadge label={`${conflictCount} conflict${conflictCount === 1 ? "" : "s"}`} tone="danger" />
+              ) : null}
+            </View> : null}
+          </View>
         </View>
 
         <View style={[styles.main, isCompact ? styles.mainCompact : null]}>
@@ -243,10 +257,35 @@ const styles = StyleSheet.create({
     ...typography.helper,
     color: colors.mutedForeground,
   },
+  headerRight: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    flexWrap: "wrap",
+    justifyContent: "flex-end",
+  },
   headerBadges: {
     flexDirection: "row",
     gap: spacing.sm,
     flexWrap: "wrap",
+  },
+  scheduleButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.xs,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    borderRadius: radius.md,
+    backgroundColor: colors.card,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  scheduleButtonPressed: {
+    opacity: 0.6,
+  },
+  scheduleButtonLabel: {
+    ...typography.label,
+    color: colors.foreground,
   },
   main: {
     flex: 1,

@@ -1,5 +1,5 @@
 import { startTransition, useCallback, useEffect, useRef, useState } from "react";
-import { BackHandler, Platform, StyleSheet, View } from "react-native";
+import { AppState, BackHandler, Platform, StyleSheet, View } from "react-native";
 import Constants from "expo-constants";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -13,6 +13,7 @@ import { KioskCameraTestScreen } from "./screens/KioskCameraTestScreen";
 import { KioskHomeScreen } from "./screens/KioskHomeScreen";
 import { KioskPairViaLoginScreen } from "./screens/KioskPairViaLoginScreen";
 import { KioskPairViaQRScreen } from "./screens/KioskPairViaQRScreen";
+import { KioskScheduleScreen } from "./screens/KioskScheduleScreen";
 import { createKioskService } from "./services/kiosk-service";
 import { clearPersistedKioskSession, loadPersistedKioskSession, persistKioskSession } from "./storage/kiosk-storage";
 import { colors, spacing } from "./theme/tokens";
@@ -23,6 +24,7 @@ type KioskScreen =
   | { name: "pair-qr" }
   | { name: "pair-login" }
   | { name: "camera-test" }
+  | { name: "schedule" }
   | { name: "result"; result: ClockFlowResult };
 
 function KioskLoadingState() {
@@ -129,18 +131,31 @@ export function KioskApp() {
       return;
     }
 
-    const unsubscribe = serviceRef.current.subscribeToNetworkStatus((status) => {
+    const runReconnectRefresh = () => {
+      void serviceRef.current.refreshConnectedData(binding).finally(() => {
+        void refreshHealth(binding);
+      });
+    };
+
+    const unsubscribeNetwork = serviceRef.current.subscribeToNetworkStatus((status) => {
       if (!status.isConnected || !status.isInternetReachable) {
         void refreshHealth(binding);
         return;
       }
 
-      void serviceRef.current.syncPendingClockEvents(binding).finally(() => {
-        void refreshHealth(binding);
-      });
+      runReconnectRefresh();
     });
 
-    return unsubscribe;
+    const appStateSubscription = AppState.addEventListener("change", (state) => {
+      if (state === "active") {
+        runReconnectRefresh();
+      }
+    });
+
+    return () => {
+      unsubscribeNetwork();
+      appStateSubscription.remove();
+    };
   }, [binding, refreshHealth]);
 
   useEffect(() => {
@@ -312,6 +327,7 @@ export function KioskApp() {
             onOpenAdminPanel={() => setAdminVisible(true)}
             onSubmitPin={handleSubmitPin}
             onCaptureReady={setHomeCaptureHandle}
+            onViewSchedule={binding ? () => startTransition(() => setScreen({ name: "schedule" })) : undefined}
           />
           <HiddenAdminPanel
             visible={adminVisible}
@@ -360,6 +376,14 @@ export function KioskApp() {
 
       {screen.name === "camera-test" ? (
         <KioskCameraTestScreen binding={binding} onBack={navigateHome} />
+      ) : null}
+
+      {screen.name === "schedule" && binding ? (
+        <KioskScheduleScreen
+          binding={binding}
+          loadScheduleWeek={serviceRef.current.loadScheduleWeek}
+          onBack={navigateHome}
+        />
       ) : null}
 
       {screen.name === "result" ? (

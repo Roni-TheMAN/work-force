@@ -2411,6 +2411,35 @@ export async function getOrganizationSchedulingSummary(
   };
 }
 
+export type DeviceSchedulingProperty = {
+  id: string;
+  organizationId: string;
+  name: string;
+  timezone: string;
+};
+
+export async function getPropertyScheduleWeekForDevice(
+  property: DeviceSchedulingProperty,
+  requestedWeekStartDate?: string | null,
+  overrides?: Partial<SchedulingDependencies>
+): Promise<PropertyScheduleWeek> {
+  const dependencies = {
+    ...defaultDependencies,
+    ...overrides,
+  };
+  const resolvedWeek = await resolveRequestedWeekStartDate(dependencies, property, requestedWeekStartDate);
+  const syntheticContext = {
+    property: {
+      id: property.id,
+      organizationId: property.organizationId,
+      name: property.name,
+      timezone: property.timezone,
+    },
+  } as PropertyRequestContext;
+
+  return buildPropertyScheduleWeekResponse(syntheticContext, resolvedWeek.weekStartDate, dependencies);
+}
+
 export const propertySchedulingInternals = {
   buildDateOnlyForTimezone,
   buildLocalDateTimeInTimezone,

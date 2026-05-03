@@ -4,6 +4,7 @@ import { HttpError } from "../../lib/http-error";
 import {
   completeQrPropertyDevicePairing,
   getDeviceContextByToken,
+  getDeviceScheduleWeek,
   recordDevicePunch,
   syncDeviceClockEvents,
   verifyEmployeePinForDevice,
@@ -116,6 +117,23 @@ export const verifyPublicDevicePinController: RequestHandler = async (req, res, 
     });
 
     res.json(result);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getPublicDeviceScheduleWeekController: RequestHandler = async (req, res, next) => {
+  try {
+    const rawWeekStartDate = req.query.weekStartDate;
+    const weekStartDate =
+      typeof rawWeekStartDate === "string" && rawWeekStartDate.trim().length > 0
+        ? rawWeekStartDate.trim()
+        : null;
+    const week = await getDeviceScheduleWeek(readDeviceToken(req), {
+      weekStartDate,
+    });
+
+    res.json({ week });
   } catch (error) {
     next(error);
   }

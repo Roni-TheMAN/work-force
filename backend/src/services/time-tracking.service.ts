@@ -21,6 +21,10 @@ import {
   getPayrollImpactForShifts,
   revalidatePayrollRunsForShiftMutation,
 } from "../modules/property/property-payroll-runs";
+import {
+  getPropertyScheduleWeekForDevice,
+  type PropertyScheduleWeek,
+} from "../modules/property/property-scheduling";
 import { hasTimeManagementPermission, hasTimeReadPermission } from "./time-permissions";
 
 type RawDbClient = {
@@ -2791,6 +2795,33 @@ export async function getDeviceContextByToken(authToken: string): Promise<Proper
   }
 
   return toPropertyDeviceSummary(refreshedDevice);
+}
+
+export async function getDeviceScheduleWeek(
+  authToken: string,
+  input: {
+    weekStartDate?: string | null;
+  }
+): Promise<PropertyScheduleWeek> {
+  const normalizedToken = normalizeRequiredText(authToken, "deviceToken");
+  const device = await loadPropertyDeviceByTokenHash(getDbClient(), hashDeviceToken(normalizedToken));
+
+  if (!device) {
+    throw new HttpError(401, "Invalid device token.");
+  }
+
+  await ensureDeviceIsActive(device);
+  await touchPropertyDeviceLastSeen(getDbClient(), device.id);
+
+  return getPropertyScheduleWeekForDevice(
+    {
+      id: device.propertyId,
+      organizationId: device.organizationId,
+      name: device.propertyName,
+      timezone: device.timezone,
+    },
+    input.weekStartDate ?? null
+  );
 }
 
 export async function verifyEmployeePinForDevice(
